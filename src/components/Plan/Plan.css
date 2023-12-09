@@ -1,0 +1,84 @@
+.plans{
+    position: relative;
+    margin-top: 3rem;
+}
+.plans-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+.plans-blur-1{
+    height: 23rem;
+    left: 0;
+    width: 32rem;
+}
+.plans-blur-2{
+    height: 23rem;
+    right: 0;
+    width: 32rem;
+}
+.plan{
+    background-color: var(--caloryCard);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+}
+.plan > :nth-child(1){
+    fill: var(--orange);
+    height: 2rem;
+    width: 2rem;
+}
+.plan > :nth-child(2){
+    font-size: 1rem;
+    font-weight: bold;
+}
+.plan > :nth-child(3){
+    font-size: 3rem;
+    font-weight: bold;
+}
+.plan .features{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.plan .features  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+.plan .features  div img{
+    width: 1rem;
+}
+.plan > :nth-child(5){
+    font-size: 0.8rem;
+}
+.plan > :nth-child(6){
+    color: #000;
+}
+.plans .plans-container>:nth-child(4){
+    transform: scale(1.2);
+    background: var(--planCard);
+}
+.plans-container>:nth-child(4) .btn{
+    color: var(--orange);
+}
+@media screen and (max-width: 768px) {
+    .plans-blur-1,
+    .plans-blur-2{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .plans-container{
+        flex-direction: column;
+    }
+    .plans .plans-container>:nth-child(4) {
+        transform: scale(1);
+    }
+}
